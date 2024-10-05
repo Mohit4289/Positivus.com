@@ -2,26 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-space-grotesk), sans-serif;
+  width: 90%;
+  margin: 20px auto;
+  background-color: white;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width: 600px) {
+  .upper{
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .container{
+    flex-direction: column;
+  }
+  .container svg{
+    width: 100%;
+  }
+  .nav {
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .brand{
+    width: 100%;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  .title{
+    flex-direction: column;
+  }
+  .title p{
+    width: auto;
+    height: auto;
+  }
+  .boxes{
+    width: 100%;
+    overflow: hidden;
+  }
+  .teamhead{
+    margin-top: 50px;
+    flex-direction: column;
+  }
+  .teamhead p{
+    width: auto;
+    height: auto;
+    margin-left: 10px;
+  }
+  .teams{
+    flex-direction: column;
+  }
+  .container2{
+    flex-direction: column;
+    padding: 20px;
+  }
+  .child{
+    margin-top: 20px;
+  }
+  .container2 button{
+    padding: 4px;
+    margin-top: 5px;
+  }
+  .contact{
+    flex-direction: column;
+  }
+  .inputs input{
+    width: 250px;
+  }
+  .inputs textarea{
+    width: 250px;
+  }
+  .inputs button{
+    width: 250px;
   }
 }

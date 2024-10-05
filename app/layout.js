@@ -1,15 +1,10 @@
-import localFont from "next/font/local";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const spaceGrotesk = Space_Grotesk({
+  weight: ["300", "700"],
+  variable: "--font-space-grotesk",
+  subsets: ["latin"],  // Added the required subsets option
 });
 
 export const metadata = {
@@ -20,9 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${spaceGrotesk.variable} antialiased`}>
         {children}
       </body>
     </html>
